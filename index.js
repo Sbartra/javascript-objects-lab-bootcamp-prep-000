@@ -1,5 +1,5 @@
 var recipes = {
-  "breakfast": "eggs"
-  "lunch": "soup"
-  "dinner": "pizza"
+  gift: "pony",
+    pet: "kitten",
+    bed: "sleigh"
 }
