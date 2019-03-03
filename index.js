@@ -1,15 +1,24 @@
 var recipes = {
-  gift: "pony",
-    pet: "kitten",
-    bed: "sleigh"
+
 }
 
-function updateObjectWithKeyAndValue(object, key, value){
-  this.object = object;
-  this.key = key;
-  this.value = value;
+function updateObjectWithKeyAndValue(object, key, value) {
+  return Object.assign({}, object, {[key]: value});
 }
 
 function destructivelyUpdateObjectWithKeyAndValue(object, key, value){
-
+  object[key] = value;
+  return object;
 }
+
+function deleteFromObjectByKey(object, key) {
+  var clone = Object.assign({}, object);
+  delete clone[key];
+  return clone;
+}
+
+ function destructivelyDeleteFromObjectByKey(object, key) {
+  delete object[key];
+  return object;
+}
+
